@@ -206,12 +206,38 @@
 // }
 
 
+
+//class-task6
+
+// class HardWordsDictionary extends Dictionary {
+//       constructor(name) {
+//         super(name)
+//         this.words = {}
+//       }
+//       add(word,description) {
+//         let obj = {
+//             word: word,
+//             description: description,
+//             isDifficult: true
+//         }
+//        this.words[word] = obj
+//       }
+//       mainName() {
+//         let values = Object.values(this.words)
+//         let keys = Object.keys(this.words)
+//         for(let i=0;i<values.length;i++) {
+//            console.log(keys[i] + "-" + values[i].description)
+//         }
+//     }
+// }
+
+
 // const hardWordsDictionary = new HardWordsDictionary('Hard words');
 // hardWordsDictionary.add('amateur', 'One who practices science or art without special training, havingonly a superficial knowledge.');
 // hardWordsDictionary.add('neologism', 'A new word or expression, as well as the new meaning of the old word.');
 // hardWordsDictionary.add('quantum', 'The indivisible part of some quantity in physics.');
 // hardWordsDictionary.remove('neologism');
-// hardWordsDictionary.showAllWords();
+// hardWordsDictionary.mainName()
 
 
 //class-task7
