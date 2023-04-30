@@ -155,206 +155,140 @@
 
 // class Dictionary {
 //     constructor(name) {
-//       this.name = name;
-//       this.words = {};
+//     this.name = name
+//     this.words = {}
 //     }
-  
-//     add(word, description) {
-//       if (!(word in this.words)) {
-//         this.words[word] = {
-//           word: word,
-//           description: description,
-//         };
-//       }
+//     add(word,description) {
+//         let obj = {
+//             word: word,
+//             description: description
+//         }
+//      this.words[word] = obj
 //     }
-  
-//     remove(word) {
-//       delete this.words[word];
+//     remove(removingWord) {
+//     delete this.words[removingWord]
 //     }
-  
-//     get(word) {
-//       return this.words[word];
+//     get(gettingWord) {
+//     console.log(this.words[gettingWord])
 //     }
-  
 //     showAllWords() {
-//       for (const word in this.words) {
-//         console.log(`${word} - ${this.words[word].description}`);
-//       }
+//         let values = Object.values(this.words)
+//         let keys = Object.keys(this.words)
+//         for(let i=0;i<values.length;i++) {
+//            console.log(keys[i] + "-" + values[i].description)
+//         }
 //     }
-//   }
-  
-//   const dictionary = new Dictionary('Explanatory Dictionary')
-//   dictionary.add('JavaScript', 'popular programming language')  
-//   dictionary.add('Web developer', 'A person who creates new services and sites or maintains and complements existing ones')
-//   dictionary.remove('JavaScript')
-//   dictionary.showAllWords()
+
+// }
+
+// const dictionary = new Dictionary('Explanatory Dictionary');
+// dictionary. add('JavaScript', 'popular programming language');
+// dictionary.add('Web developer', 'A person who creates new services and sites or maintains andsupplements existing ones');
+// dictionary.remove('JavaScript');
+// dictionary.showAllWords();
 
 
-
-//Class task 5
+//class-task5
 
 // class HardWordsDictionary extends Dictionary {
-//     constructor(name) {
-//       super(name);
-//     }
-  
-//     add(word, description) {
-//       const obj = {
-//         word: word,
-//         description: description,
-//         isDifficult: true
-//       };
-  
-//       if (!this.words[word]) {
-//         this.words[word] = obj;
+//       constructor(name) {
+//         super(name)
+//         this.words = {}
 //       }
-//     }
-//   }
+//       add(word,description) {
+//         let obj = {
+//             word: word,
+//             description: description,
+//             isDifficult: true
+//         }
+//        this.words[word] = obj
+//       }
+// }
 
-//   const hardWordsDictionary = new HardWordsDictionary("Hard words");
-// hardWordsDictionary.add("amateur","One who practices science or art without special training, having only a superficial knowledge."
-// );
-// hardWordsDictionary.add("neologism", "A new word or expression, as well as the new meaning of the old word."
-// );
-// hardWordsDictionary.add("quantum","The indivisible part of some quantity in physics."
-// );
 
-// hardWordsDictionary.remove("neologism");
+// const hardWordsDictionary = new HardWordsDictionary('Hard words');
+// hardWordsDictionary.add('amateur', 'One who practices science or art without special training, havingonly a superficial knowledge.');
+// hardWordsDictionary.add('neologism', 'A new word or expression, as well as the new meaning of the old word.');
+// hardWordsDictionary.add('quantum', 'The indivisible part of some quantity in physics.');
+// hardWordsDictionary.remove('neologism');
 // hardWordsDictionary.showAllWords();
 
 
-  
+//class-task7
 
-
-//Class task 6
-// class Dictionary {
-//     #name;
-//     #words;
-  
-//     constructor(name) {
-//       this.#name = name;
-//       this.#words = {};
-//     }
-  
-//     get mainName() {
-//       return this.#name;
-//     }
-  
-//     set setMainName(newName) {
-//       this.#name = newName;
-//     }
-  
-//     get allWords() {
-//       return this.#words;
-//     }
-  
-//     addNewWord(word, description) {
-//       this.#words[word] = description;
-//     }
-  
-//     remove(word) {
-//       delete this.#words[word];
-//     }
-  
-//     showAllWords() {
-//       console.log(this.#words);
-//     }
-//   }
-  
-//   class HardWordsDictionary extends Dictionary {
-//     constructor(name) {
-//       super(name);
-//     }
-  
-//     add(word, description) {
-//       const isHard = word.length >= 10;
-//       if (isHard) {
-//         this.addNewWord(word, description);
-//       }
-//     }
-//   }
-  
-//   const hardWordsDictionary = new HardWordsDictionary("Difficult words");
-//   hardWordsDictionary.add("amateur", "One who practices science or art without special training, having only a superficial knowledge.");
-//   hardWordsDictionary.add("neologism", "A new word or expression, as well as the new meaning of the old word.");
-//   hardWordsDictionary.add("quantum", "The indivisible part of some quantity in physics.");
-//   hardWordsDictionary.remove("neologism");
-//   hardWordsDictionary.showAllWords();
-//   console.log(hardWordsDictionary.mainName);
-//   hardWordsDictionary.setMainName = "New Dictionary";
-//   console.log(hardWordsDictionary.mainName); 
-//   console.log(hardWordsDictionary.allWords); 
-  
-
-
-
-
-
-
-//Class task 7
 // class Developer {
-//     constructor(fullName, age, position = 'Developer') {
-//       this.fullName = fullName;
-//       this.age = age;
-//       this.position = position;
-//       this.technologies = [];
+//     technology = []
+//     constructor(fullName,age,position) {  
+//         this.fullName = fullName,
+//         this.age = age,
+//         this.position = position
 //     }
-  
-//     code() {}
-  
-//     learnNewTechnology(technology) {
-//       this.technologies.push(technology);
-//     }
-//   }
-  
-//   class JuniorDeveloper extends Developer {
-//     constructor(fullName, age) {
-//       super(fullName, age, 'Junior');
-//       this.technologies = ['HTML', 'CSS', 'JavaScript'];
-//     }
-  
 //     code() {
-//       console.log('Junior developer is writing code...');
+
 //     }
-//   }
-  
-//   class MiddleDeveloper extends Developer {
-//     constructor(fullName, age) {
-//       super(fullName, age, 'Middle');
-//       this.technologies = ['HTML', 'CSS', 'JavaScript', 'React'];
+//     learnNewTechnology() {
+
 //     }
-  
+// }
+
+// class JuniorDeveloper extends Developer {
+//     constructor(fullName,age) {
+//       super(fullName,age)
+//       this.position = 'Junior'
+//     }
 //     code() {
-//       console.log('Middle developer is writing code...');
+//         console.log('Junior developer is writing code ...')
 //     }
-//   }
-  
-//   class SeniorDeveloper extends Developer {
-//     constructor(fullName, age) {
-//       super(fullName, age, 'Senior');
-//       this.technologies = ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS'];
+//     learnNewTechnology() {
+//     this.technology = ['HTML','CSS','JavaScript']
 //     }
-  
+// }
+
+// let juniorSahil = new JuniorDeveloper('Sahil',20)
+// juniorSahil.learnNewTechnology()
+
+
+
+
+// class MiddleDeveloper extends Developer {
+//     constructor(fullName,age) {
+//       super(fullName,age)
+//       this.position = 'Middle'
+//     }
 //     code() {
-//       console.log('Senior developer is writing code...');
+//         console.log('Middle developer is writing code ...')
 //     }
-//   }
+//     learnNewTechnology() {
+//     this.technology = ['HTML','CSS','JavaScript','React']
+//     }
+// }
 
-  
-// const juniorDeveloper = new JuniorDeveloper('Anastasia', 20);
-// const middleDeveloper = new MiddleDeveloper('Igor', 25);
-// const seniorDeveloper = new SeniorDeveloper('Maxim', 30);
-
-// juniorDeveloper.code(); 
-// middleDeveloper.code(); 
-// seniorDeveloper.code(); 
-
-// console.log(juniorDeveloper.fullName, juniorDeveloper.age, juniorDeveloper.position); 
-// console.log(middleDeveloper.fullName, middleDeveloper.age, middleDeveloper.position); 
-// console.log(seniorDeveloper.fullName, seniorDeveloper.age, seniorDeveloper.position); 
+// let middleSahil = new MiddleDeveloper('Sahil',20)
+// middleSahil.learnNewTechnology()
 
 
 
+// class SeniorDeveloper extends Developer {
+//     constructor(fullName,age) {
+//       super(fullName,age)
+//       this.position = 'Senior'
+//     }
+//     code() {
+//         console.log('Senior developer is writing code ...')
+//     }
+//     learnNewTechnology() {
+//     this.technology = ['HTML','CSS','JavaScript','NodeJS']
+//     }
+// }
+
+// let seniorSahil = new SeniorDeveloper('Sahil',20)
+// seniorSahil.learnNewTechnology()
+// juniorSahil.code()
+// middleSahil.code()
+// seniorSahil.code()
+// console.log(juniorSahil.fullName, juniorSahil.age, juniorSahil.position)
+// console.log(middleSahil.fullName, middleSahil.age, middleSahil.position)
+// console.log(seniorSahil.fullName, seniorSahil.age, seniorSahil.position)
 
 
 
